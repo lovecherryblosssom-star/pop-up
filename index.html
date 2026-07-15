@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Lilium Flowers</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <style>
-.box { position: relative; width: 300px; }
-.btn { position: absolute; top: 0; right: 5px; cursor: pointer; }
+  body {
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    background: #fdf2f6; 
+    }
+  .box { 
+    width: 300px; 
+    margin: 20px auto; 
+    display: none; 
+    }
+  img {
+    width: 300px; 
+    border-radius: 8px; 
+    }
 </style>
 </head>
 <body>
 
+<h1>The Lilium</h1>
+<p>A delicate pink flower with dew drops.</p>
+
 <div class="box">
-  <span class="btn">X</span>
-  <img src="lilium.jpeg" width="300">
+  <img src="lilium.jpeg">
+  <p>Lilium in bloom</p>
 </div>
 
 <script>
-$('.btn').click(function(){
-  $('.box').hide();
+$(window).load(function(){
+
+  $('.box').fadeIn(1000, function(){
+
+    $('.box').fadeTo(1000, 0.3, function(){
+
+      $('.box').fadeTo(1000, 1, function(){
+
+        $('.box').slideUp(1000, function(){
+
+          $('.box').slideDown(1000, function(){
+
+            $('.box').fadeOut(1000);
+
+          });
+        });
+      });
+    });
+  });
+
 });
 </script>
 
