@@ -46,10 +46,10 @@ $(window).load(function(){
     .fadeTo(1000, 1)
     .slideUp(1000)
     .slideDown(1000)
-    .animate({ left: '300px', opacity: 0 }, 1000)                            // slide right, disappear
-    .animate({ left: '-300px' }, 0)                                          // jump instantly to the left side (still invisible)
-    .animate({ left: '0px', opacity: 1 }, 1000);                             // slide back to center, appear
-});
+    .animate({ left: '300px', opacity: 0 }, 1000)                                              // slide right, disappear
+    .animate({ left: '-300px' }, 0)                                                            // jump instantly to the left side (still invisible)
+    .animate({ left: '0px', opacity: 1 }, 1000);                                               // slide back to center, appear
+}); 
 
 $('.btn').click(function(){
   $('.box').hide();
