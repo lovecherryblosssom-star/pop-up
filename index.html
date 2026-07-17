@@ -40,25 +40,15 @@
 
 <script>
 $(window).load(function(){
-
-  $('.box').fadeIn(1000, function(){
-
-    $('.box').fadeTo(1000, 0.3, function(){
-
-      $('.box').fadeTo(1000, 1, function(){
-
-        $('.box').slideUp(1000, function(){
-
-          $('.box').slideDown(1000, function(){
-
-            $('.box').fadeOut(1000);
-
-          });
-        });
-      });
-    });
-  });
-
+  $('.box')
+    .fadeIn(1000)
+    .fadeTo(1000, 0.3)
+    .fadeTo(1000, 1)
+    .slideUp(1000)
+    .slideDown(1000)
+    .animate({ left: '300px', opacity: 0 }, 1000)                            // slide right, disappear
+    .animate({ left: '-300px' }, 0)                                          // jump instantly to the left side (still invisible)
+    .animate({ left: '0px', opacity: 1 }, 1000);                             // slide back to center, appear
 });
 
 $('.btn').click(function(){
